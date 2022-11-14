@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" id="card1">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <p>Please Input Your Details, Thank You</p>
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <label for="inputUsername">Username</label>
+                        <input type="text" class="form-control" id="inputUsername"  placeholder="Enter Username">
+                        <small id="inputUsername" class="form-text text-muted"></small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                    <div class="text">
+                        <h5>-------------- OR --------------</h5>
+                    </div>
+
+                    <div class="forgotten">
+                        <p>
+                            <a [routerLink]="['/forgotten']"><h6>Forgotten Password?</h6></a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="card" id="card2">
+                <div class="text2">
+                    <h6>Don't Have An Account <a [routerLink]="['/create']">Sign Up!</a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

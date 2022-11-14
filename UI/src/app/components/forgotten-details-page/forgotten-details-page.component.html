@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" id="card1">
+                <div class="text-center">
+                    <i class="fa-solid fa-lock"></i>
+                    <h5>Trouble Logging In?</h5>
+                    <h6>Enter your email, phone, or username and we'll send you a link to get back into your account.</h6>
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="inputUsername"  placeholder="Enter Username, Email, Phone Number">
+                        <small id="inputUsername" class="form-text text-muted"></small>
+                    </div>
+                    
+                </form>
+                <button type="submit" class="btn btn-primary">Send Login Link</button>
+
+                <div class="or-text">
+                    <h6>-------------- OR --------------</h6>
+                </div>
+                <div class="new-account">
+                    <p>
+                        <a [routerLink]="['/create']">Create A New Account</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <div class="login-text">
+                    <p>
+                        <a [routerLink]="['/login']">Back To Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+#card1{
+    position: absolute;
+    border: none;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background: cyan;
+    background: linear-gradient(45deg, purple 10%, orange 90%);
+    margin-bottom: 50px;
+}
+
+#card1 .text-center{
+    color: white;
+}
+
+#card1 .text-center h5{
+    font-size: 18px;
+}
+
+#card1 .text-center i{
+    font-size: 64px;
+    margin-bottom: 10px;
+    
+}
+
+#card1 .text-center h6{
+    font-size: 14px;
+    color: rgb(231, 225, 225);
+    font-weight: lighter;
+}
+
+#card1 form input{
+    margin-top: 10px;
+}
+
+#card1 button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+#card1 button:hover{
+    background: linear-gradient(45deg, purple 10%, orange 90%);
+}
+
+#card1 .or-text h6{
+    text-align: center;
+    font-size: 16px;
+    color: rgb(221, 221, 221);
+    font-weight: lighter;
+    margin-top: 17px;
+}
+
+#card1 .new-account p, #card1 .new-account p a{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#card2{
+    position: absolute;
+    border: none;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background: cyan;
+    background: linear-gradient(90deg, rgb(243, 195, 107) 0%, rgb(255, 122, 255) 100%);
+    margin-top: 268px;
+    height: 20px;
+}
+
+#card2 .login-text p, #card2 .login-text p a{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
