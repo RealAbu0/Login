@@ -38,3 +38,10 @@ C:\Users\abu\Desktop\Login\API\LoginAPI\obj\Debug\net6.0\refint\LoginAPI.dll
 C:\Users\abu\Desktop\Login\API\LoginAPI\obj\Debug\net6.0\LoginAPI.pdb
 C:\Users\abu\Desktop\Login\API\LoginAPI\obj\Debug\net6.0\LoginAPI.genruntimeconfig.cache
 C:\Users\abu\Desktop\Login\API\LoginAPI\obj\Debug\net6.0\ref\LoginAPI.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\abu\Desktop\Login\API\LoginAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
