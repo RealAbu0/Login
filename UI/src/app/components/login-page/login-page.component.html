@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -6,17 +7,26 @@
                     <h1>Login</h1>
                     <p>Please Input Your Details, Thank You</p>
                 </div>
-                <form>
-                    <div class="mb-3">
+                <form [formGroup]="loginForm">
+
+                    <div class="form-group">
                         <label for="inputUsername">Username</label>
-                        <input type="text" class="form-control" id="inputUsername"  placeholder="Enter Username">
-                        <small id="inputUsername" class="form-text text-muted"></small>
+                        <div class="input-field" [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required', 'username')">
+                            <input type="text" formControlName="username" class="form-control" id="inputUsername"  placeholder="Username">
+                            <small id="inputUsername" class="form-text text-muted"></small>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <small class="text-danger" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required', 'username')">*Username is required</small>
+             
+                    <div class="form-group" >
+                        <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password' )">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">*Password is required</small>
+
+                    <button type="submit" class="btn btn-primary" (click)="onLogin()">Login</button>
 
                     <div class="text">
                         <h5>-------------- OR --------------</h5>
@@ -29,11 +39,17 @@
                     </div>
                 </form>
             </div>
+
             <div class="card" id="card2">
                 <div class="text2">
                     <h6>Don't Have An Account <a [routerLink]="['/create']">Sign Up!</a></h6>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
+
+
+
+

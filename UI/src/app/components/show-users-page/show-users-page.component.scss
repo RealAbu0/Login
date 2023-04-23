@@ -1,0 +1,17 @@
+.container{
+    margin-top: 10px;
+}
+
+.container .goback p {
+    text-align: center;
+}
+
+.container .goback p a{
+    color: black;
+    font-size: 20px;
+}
+
+.container .goback p a:hover{
+    color: white;
+    background-color: black;
+}

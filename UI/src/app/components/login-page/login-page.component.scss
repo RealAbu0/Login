@@ -7,7 +7,7 @@
     padding: 50px;
     transform: translate(-50%, -50%);
     background: cyan;
-    background: linear-gradient(90deg, red 4%, blue 100%);
+    background: linear-gradient(90deg, blue 4%, red 100%);
     margin-bottom: 50px;
 }
 
@@ -29,12 +29,12 @@
     font-size: 18px;
     justify-content: center;
     margin-left: 129px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 #card1 button:hover{
     color: white;
-    background: linear-gradient(90deg, red 4%, blue 100%);
+    background: linear-gradient(90deg, blue 4%, red 100%);
 }
 
 #card1 .text{
@@ -64,8 +64,8 @@
     padding: 50px;
     transform: translate(-50%, -50%);
     background: cyan;
-    background: linear-gradient(90deg, red 4%, blue 100%);
-    margin-top: 350px;
+    background: linear-gradient(90deg, blue 4%, red 100%);
+    margin-top: 370px;
 }
 
 #card2 .text2{

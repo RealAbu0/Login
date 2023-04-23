@@ -1,0 +1,39 @@
+nav{
+  height: 80px;
+}
+
+#signOutIcon{
+  font-size: 30px;
+}
+
+#signOutIcon:hover{
+  background-color: white;
+  color: aqua;
+}
+
+.sidenav1{
+  color: cyan;
+}
+
+#add-success-alert
+{
+  display: none;
+}
+
+#add-success-alert{
+  animation-name: fadeInAndOut;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fadeInAndOut {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeInAndOut {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+

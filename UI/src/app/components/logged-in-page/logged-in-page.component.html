@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between">
+    <div class="container">
+        <a class="navbar-brand">Hello, {{username}}</a>
+        <a routerLink="/profile">Check Your Profile!</a>
+        <a (click)="signOut()"><i id="signOutIcon" class="fa-solid fa-right-from-bracket"></i></a>
+
+        
+    </div>
+</nav>
+
+
+
+<app-show-users-page></app-show-users-page>
+
+<div class="alert alert-success" role="alert" id="add-success-alert">
+    Account successfully added!
+</div>  
+  
+  

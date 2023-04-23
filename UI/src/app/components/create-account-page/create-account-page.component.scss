@@ -19,6 +19,10 @@
     margin-top: 10px;
 }
 
+#card1 form label{
+    margin-top: 7px;
+}
+
 
 #card1 .text-center p{
     font-size: 10px;
@@ -40,6 +44,7 @@
     align-content: center;
     width: 150px;
     margin-left: 86px;
+    margin-top: 15px;
 }
 
 #card1 button:hover{
@@ -56,7 +61,7 @@
     transform: translate(-50%, -50%);
     background: cyan;
     background: linear-gradient(45deg, rgb(14, 236, 14) 10%, red 90%);
-    margin-top: 310px;
+    margin-top: 320px;
     height: 40px;
 }
 
@@ -67,3 +72,4 @@
 #card2 .text-center a{
     text-decoration: none;
 }
+
