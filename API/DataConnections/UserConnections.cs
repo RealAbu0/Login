@@ -2,6 +2,7 @@
 using DapperContext;
 using Domain.Interface;
 using Domain.Model;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -65,11 +66,13 @@ namespace DataConnections
             dp.Add("@Username", user.Username);
             dp.Add("@PhoneNumber", user.PhoneNumber);
             dp.Add("@EmailAddress", user.EmailAddress);
-            dp.Add("@Password", user.Username);
+            dp.Add("@Password", user.Password);
+            dp.Add("@Token", user.Token);
+            dp.Add("@Role", user.Role);
 
             using(var conn = _dataContext.GetConnection())
             {
-                var result = await conn.QuerySingleAsync<UserModel>(query, dp, commandType: CommandType.StoredProcedure);
+                var result = await conn.QuerySingleOrDefaultAsync<UserModel>(query, dp, commandType: CommandType.StoredProcedure);
                 return result;
             }
         }
@@ -82,12 +85,73 @@ namespace DataConnections
             dp.Add("@Username", user.Username);
             dp.Add("@PhoneNumber", user.PhoneNumber);
             dp.Add("@EmailAddress", user.EmailAddress);
-            dp.Add("@Password", user.Username);
+            dp.Add("@Password", user.Password);
 
             using (var conn = _dataContext.GetConnection())
             {
                 var result = await conn.QuerySingleAsync<UserModel>(query, dp, commandType: CommandType.StoredProcedure);
                 return result;
+            }
+        }
+
+        public async Task<UserModel> AuthenticateLogin(UserModel user)
+        {
+            var query = "LoginUser_sp";
+            DynamicParameters dp = new DynamicParameters();
+            dp.Add("@Username", user.Username);
+            dp.Add("@Password",user.Password);
+
+            using (var conn = _dataContext.GetConnection())
+            {
+                var result = await conn.QueryFirstOrDefaultAsync<UserModel>(query, dp, commandType: CommandType.StoredProcedure);
+                    
+                return result;
+            }
+
+        }
+
+        public async Task<bool> CheckUsernameExist(string user)
+        {
+            var query = "CheckSameUsername_sp";
+            DynamicParameters dp = new DynamicParameters();
+            dp.Add("@Username", user);
+   
+
+            using (var conn = _dataContext.GetConnection())
+            {
+                var result = await conn.QueryFirstOrDefaultAsync<bool>(query, dp, commandType: CommandType.StoredProcedure);
+
+                return result;
+
+            }
+        }
+
+        public async Task<bool> CheckEmailExist(string user)
+        {
+            var query = "CheckSameEmailAddress_sp";
+            DynamicParameters dp = new DynamicParameters();
+            dp.Add("@EmailAddress", user);
+           
+
+            using (var conn = _dataContext.GetConnection())
+            {
+                var result = await conn.QueryFirstOrDefaultAsync<bool>(query, dp, commandType: CommandType.StoredProcedure);
+
+                return result;
+
+            }
+        }
+
+        public string GetRefreshToken()
+        {
+            var query = "SelectRefreshToken_sp";
+            DynamicParameters dp = new DynamicParameters();
+            dp.Add("@RefreshToken");
+
+            using (var conn = _dataContext.GetConnection())
+            {
+                var result = conn.QueryFirstOrDefaultAsync<string>(query, dp, commandType: CommandType.StoredProcedure);
+                return result.ToString();
             }
         }
     }
