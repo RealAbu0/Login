@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Domain.Model;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,7 @@ namespace DapperContext
     public class DataContext
     {
         public IConfiguration Configuration;
+        
         private readonly string _connectionString;
 
         public DataContext(IConfiguration configuration)
@@ -21,6 +23,8 @@ namespace DapperContext
             Configuration = configuration;
             _connectionString = Configuration.GetConnectionString("Default");
         }
+
+        
 
         public IDbConnection GetConnection()
             => new SqlConnection(_connectionString);
